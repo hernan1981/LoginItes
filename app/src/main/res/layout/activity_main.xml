@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pantallaLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="306dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorPrimary"
+        android:onClick="eventoIngresar"
+        android:text="@string/ingresar"
+        android:textColor="@color/colorTxtBtn"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecordar" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="308dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="nombre"
+        android:ems="10"
+        android:hint="@string/ingrese_su_nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBienvenida" />
+
+    <EditText
+        android:id="@+id/txtPsw"
+        android:layout_width="303dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints="psw"
+        android:ems="10"
+        android:hint="@string/ingrese_su_contrase_a"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="251dp"
+        android:layout_height="106dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@mipmap/logo_ites" />
+
+    <Switch
+        android:id="@+id/btnRecordar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorFondo"
+        android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPsw" />
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="312dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/bienvenido_de_nuevo"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtSinReg"
+        android:layout_width="308dp"
+        android:layout_height="30dp"
+        android:text="@string/crear_usuario"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/txtRecordar"
+        android:layout_width="170dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/recordar_usuario"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toEndOf="@+id/btnRecordar"
+        app:layout_constraintTop_toBottomOf="@+id/txtPsw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
